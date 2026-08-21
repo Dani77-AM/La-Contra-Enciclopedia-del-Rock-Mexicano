@@ -1,0 +1,13 @@
+:root {
+  --color-fondo: #0d0d0d;
+  --color-fondo-alt: #1a1a1a;
+  --color-acento: #c1121f;
+  --color-acento-oscuro: #780000;
+  --color-texto: #f5f0e8;
+  --color-detalle: #e6a817;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
