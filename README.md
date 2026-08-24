@@ -8,7 +8,7 @@ Recomendación de proyectos musicales de Rock Mexicano
 
 
 
-##2. Descripción
+## 2. Descripción
 
 Descubre bandas recomendadas desde los años 60 hasta los 2020, con enlaces directos a su Facebook y Spotify. Explora, escucha y conoce cómo ha evolucionado el rock mexicano y proyectos que valen la pena escuchar a través de este espacio.
 
