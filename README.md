@@ -19,6 +19,8 @@ JavaScript
 Git
 GitHub
 Claude AI
+
+
 4. Proceso con IA
 
 Prompt #1
@@ -255,10 +257,10 @@ Siempre respaldé mis prototipos antes de volver a pedir o copiar nueva informac
 
 📸 Capturas de la página
 
-![Vista de inicio ] (capturas/principal1.png)
-![Recomedaciones] (capturas/secciones2.png)
-![Ejemplodecada90s] (capturas/secciones3.png)
-![Ejemplodecada10s] (capturas/secciones4.png)
-![Ejemploseccion] (capturas/secciones5.png)
-![Ejemplopagina70s] (capturas/70s.png)
-![Ejemplopagina60s] (capturas/60s.png)
+![Vista de inicio ](capturas/principal1.png)
+![Recomedaciones](capturas/secciones2.png)
+![Ejemplodecada90s](capturas/secciones3.png)
+![Ejemplodecada10s](capturas/secciones4.png)
+![Ejemploseccion](capturas/secciones5.png)
+![Ejemplopagina70s](capturas/70s.png)
+![Ejemplopagina60s](capturas/60s.png)
