@@ -1,13 +1,45 @@
+/* ===============================
+   paleta de colores (fondo  + acentos por década)
+   =============================== */
 :root {
-  --color-fondo: #0d0d0d;
-  --color-fondo-alt: #1a1a1a;
-  --color-acento: #c1121f;
-  --color-acento-oscuro: #780000;
-  --color-texto: #f5f0e8;
-  --color-detalle: #e6a817;
+  --carbon: #1a1a1a;
+  --carbon-claro: #242424;
+  --oxido: #b23a2e;
+  --mostaza: #0a4c4b;
+
+  /* Acento propio de cada década */
+  --acento-60: #d4a017; /* mostaza psicodélica */
+  --acento-70: #a67c27; /* dorado envejecido progresivo */
+  --acento-80: #00e5ff; /* cian eléctrico punk/synth */
+  --acento-90: #a6431b; /* óxido grunge/alternativo */
+  --acento-2000: #0057ff; /* azul digital */
+  --acento-2010: #16a394; /* verde-azulado indie/streaming */
+  --acento-2020: #e85d3f; /* coral vibrante */
 }
 
+/* ===============================
+   TIPOGRAFÍA (personalización 1)
+   =============================== */
 body {
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  background-color: var(--carbon);
+  color: #e8e8e8;
+}
+
+/* ===============================
+   NAVBAR (personalización 2: color)
+   =============================== */
+.mi-navbar {
+  background-color: #141414;
+  border-bottom: 3px solid var(--oxido);
+}
+
+.mi-navbar .nav-link {
+  color: #e8e8e8;
+  transition: color 0.3s ease; /* preparación para hover */
+}
+
+/* Hover en los links del navbar (personalización 3: hover) */
+.mi-navbar .nav-link:hover {
+  color: var(--mostaza);
 }
