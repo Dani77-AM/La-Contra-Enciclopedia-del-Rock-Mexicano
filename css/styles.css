@@ -43,3 +43,31 @@ body {
 .mi-navbar .nav-link:hover {
   color: var(--mostaza);
 }
+
+
+/* ===============================
+   Título principal (degradado)
+   =============================== */
+.titulo-principal {
+  background: linear-gradient(135deg, var(--oxido), var(--mostaza));
+  padding: 60px 20px;
+}
+
+/* ===============================
+   Título para cada decada (personalización 4: bordes)
+   =============================== */
+.titulo-decada {
+  color: var(--mostaza);
+  border-left: 6px solid var(--oxido);
+  padding-left: 12px;
+  margin-bottom: 15px;
+}
+
+/* Cada década toma su propio acento */
+#decada60 .titulo-decada   { color: var(--acento-60);   border-left-color: var(--acento-60); }
+#decada70 .titulo-decada   { color: var(--acento-70);   border-left-color: var(--acento-70); }
+#decada80 .titulo-decada   { color: var(--acento-80);   border-left-color: var(--acento-80); }
+#decada90 .titulo-decada   { color: var(--acento-90);   border-left-color: var(--acento-90); }
+#decada2000 .titulo-decada { color: var(--acento-2000); border-left-color: var(--acento-2000); }
+#decada2010 .titulo-decada { color: var(--acento-2010); border-left-color: var(--acento-2010); }
+#decada2020 .titulo-decada { color: var(--acento-2020); border-left-color: var(--acento-2020); }
