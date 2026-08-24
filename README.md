@@ -1,6 +1,8 @@
-Readme · MD
-🎸 Los Olvidados del Rock Mexicano y Mas.
+
+🎸 
 1. Nombre del proyecto
+
+Los olvidados del Rock Mexicano y mas..
 
 Recomendación de proyectos musicales de Rock Mexicano
 
@@ -9,6 +11,7 @@ Recomendación de proyectos musicales de Rock Mexicano
 Descubre bandas recomendadas desde los años 60 hasta los 2020, con enlaces directos a su Facebook y Spotify. Explora, escucha y conoce cómo ha evolucionado el rock mexicano y proyectos que valen la pena escuchar a través de este espacio.
 
 3. Tecnologías
+
 HTML
 CSS
 Bootstrap
@@ -252,4 +255,10 @@ Siempre respaldé mis prototipos antes de volver a pedir o copiar nueva informac
 
 📸 Capturas de la página
 
-
+![Vista de inicio ] (capturas/principal1.png)
+![Recomedaciones] (capturas/secciones2.png)
+![Ejemplodecada90s] (capturas/secciones3.png)
+![Ejemplodecada10s] (capturas/secciones4.png)
+![Ejemploseccion] (capturas/secciones5.png)
+![Ejemplopagina70s] (capturas/70s.png)
+![Ejemplopagina60s] (capturas/60s.png)
