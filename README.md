@@ -1,38 +1,43 @@
 
 🎸 
-1. Nombre del proyecto
+## 1. Nombre del proyecto
 
 Los olvidados del Rock Mexicano y mas..
 
 Recomendación de proyectos musicales de Rock Mexicano
 
-2. Descripción
+
+
+##2. Descripción
 
 Descubre bandas recomendadas desde los años 60 hasta los 2020, con enlaces directos a su Facebook y Spotify. Explora, escucha y conoce cómo ha evolucionado el rock mexicano y proyectos que valen la pena escuchar a través de este espacio.
 
-3. Tecnologías
 
-HTML
-CSS
-Bootstrap
-JavaScript
-Git
-GitHub
-Claude AI
+## 3. Tecnologías
+
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- Git
+- GitHub
+- Claude AI
 
 
-4. Proceso con IA
+
+
+## 4. Proceso con IA
+
 Prompt #1
 
 Quiero una paleta de colores más típica del rock mexicano no tan rosa naranja y morado algo más enfocado en décadas sesenta colores más psicodélicos 70s más progresivos 80s más electrónica y punk y 90s más alternativo 2000s algo más novedoso no lo metas al código solo dame ideas.
-
 
 prompt # 2
 
 en el botón de conocer más o explora más ira a dar a otra página con información relevante de varios artistas lo que quiero es hacer  cuadros de reseñas donde salga otros cuatro artistas ya bajo en forma redonda 2 álbumes que sean recomendados y abajo unos enlaces de YouTube quiero que esta página tenga cosas dinámicas dame ideas ya que ese será el esqueleto para las demás décadas
 
 
-5. Código generado vs. código propio
+## 5. Código generado vs. código propio
 
 La IA me ayudó bastante en los **estilos y animaciones** (el anillo giratorio tipo disco, el degradado del hero y el centrado del contenido). El resto — la paleta de colores en variables, la tipografía, el navbar, los títulos y bordes por década, y los botones — lo fui ajustando y escribiendo yo mismo con base en lo que ya tenía.
 
@@ -148,13 +153,13 @@ body {
 
 
 
-6. Aprendizaje
+## 6. Aprendizaje
 
 No sabía cómo animar algunas secciones, y la IA me ayudó bastante a darle un poco más de dinamismo a la página.
 
 También en la paleta de colores me recomendó tonos que iban de acuerdo a lo que quería, aunque hubo veces que yo mismo la modifiqué porque no me gustaba cómo se veía. Diría que fue un trabajo 50/50 entre lo que propuso la IA y mis propios ajustes.
 
-7. Reflexión
+## 7.Reflexión
 ¿Hubo algún momento en que la IA generó código que no comprendía?
 
 Sí, hubo varios momentos. Aprendí que hay que saber preguntar bien para no repetir cambios innecesarios, ya que a veces al pedir un ajuste, la IA modificaba otras partes del código sin que yo lo pidiera.
@@ -166,7 +171,7 @@ Siempre respaldé mis prototipos antes de volver a pedir o copiar nueva informac
 ![Tabla de especificacione](capturas/tablita.png)
 
 
-📸 Capturas de la página
+## 📸 Capturas de la página
 
 ![Vista de inicio ](capturas/principal1.png)
 ![Recomedaciones](capturas/secciones2.png)
