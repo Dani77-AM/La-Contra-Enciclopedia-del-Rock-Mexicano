@@ -71,3 +71,504 @@ body {
 #decada2000 .titulo-decada { color: var(--acento-2000); border-left-color: var(--acento-2000); }
 #decada2010 .titulo-decada { color: var(--acento-2010); border-left-color: var(--acento-2010); }
 #decada2020 .titulo-decada { color: var(--acento-2020); border-left-color: var(--acento-2020); }
+
+
+/* ===============================
+   Cards (personalización 5: bordes + tamaño de imagen)
+   =============================== */
+.card-banda {
+  background-color: var(--carbon-claro);
+  border: none;
+  border-top: 4px solid var(--oxido);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover */
+  animation: aparecer 0.6s ease both;
+}
+
+#decada60 .card-banda   { border-top-color: var(--acento-60); }
+#decada70 .card-banda   { border-top-color: var(--acento-70); }
+#decada80 .card-banda   { border-top-color: var(--acento-80); }
+#decada90 .card-banda   { border-top-color: var(--acento-90); }
+#decada2000 .card-banda { border-top-color: var(--acento-2000); }
+#decada2010 .card-banda { border-top-color: var(--acento-2010); }
+#decada2020 .card-banda { border-top-color: var(--acento-2020); }
+
+/* Hover en las cards: se eleva y crece un poco */
+.card-banda:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 28px rgba(7, 69, 29, 0.6);
+}
+
+.card-banda .card-title {
+  color: #f2f2f2;
+}
+
+.card-banda .card-text {
+  color: #b8b8b8;
+}
+
+/* Contenedor de la imagen para el overlay al hacer hover */
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+   pointer-events: none;
+}
+
+.card-banda img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  
+}
+
+/* La imagen hace zoom suave al pasar el mouse */
+.card-banda:hover img {
+  transform: scale(1.08);
+  
+}
+
+/* Animación de entrada de las cards */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   Botones personalizados personalizados (personalización 6: colores + margen)
+   =============================== */
+.btn-mi-boton {
+  background-color: var(--oxido);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin: 4px 4px 0 0;
+  font-size: 0.9rem;
+  
+
+}
+
+.btn-mi-boton:hover {
+  background-color: var(--mostaza);
+  color: #1a1a1a;
+  
+}
+
+/* ===============================
+   Botones de redes sociales (con ícono SVG incrustado)
+   =============================== */
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 4px 4px 0 0;
+  font-size: 0.85rem;
+  color: #ffffff;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-red:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+  color: #ffffff;
+}
+
+/* Se dejan los colores de marca originales: son íconos reconocibles
+   y no deben cambiar aunque cambie la paleta del sitio me
+   Importante falta modicar aqui ya que en algunos casos no se usara el de facebook si no el de discogs */
+.btn-facebook { background-color: #1877f2; }
+.btn-spotify  { background-color: #1db954; }
+.btn-youtube  { background-color: #cc0000; }
+
+.icono-red {
+  flex-shrink: 0;
+}
+
+/* ===============================
+   Botón Explora mas (uno por década, toma el acento de su sección)
+   =============================== */
+.btn-explorar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mostaza);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  animation: pulso-explorar 2.5s ease-in-out infinite;
+}
+
+/* Pulso constante: el botón "respira" para llamar la atención */
+@keyframes pulso-explorar {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.5); }
+  50%      { box-shadow: 0 0 0 8px rgba(55, 173, 149, 0); }
+}
+
+/* Brillo que cruza el botón al pasar el mouse */
+.btn-explorar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(11, 98, 135, 0.6), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-explorar:hover::before {
+  left: 125%;
+}
+
+.btn-explorar:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+  animation-play-state: paused;
+}
+
+/* Cada década pinta su propio botón "Explora más" */
+#decada60 .btn-explorar   { background-color: var(--acento-60); color: #1a1a1a; }
+#decada70 .btn-explorar   { background-color: var(--acento-70); color: #ffffff; }
+#decada80 .btn-explorar   { background-color: var(--acento-80); color: #1a1a1a; }
+#decada90 .btn-explorar   { background-color: var(--acento-90); color: #ffffff; }
+#decada2000 .btn-explorar { background-color: var(--acento-2000); color: #ffffff; }
+#decada2010 .btn-explorar { background-color: var(--acento-2010); color: #ffffff; }
+#decada2020 .btn-explorar { background-color: var(--acento-2020); color: #ffffff; }
+
+/* Título e imagen que llevan a la página de detalle */
+.enlace-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.enlace-card:hover .card-title {
+  color: var(--mostaza);
+}
+
+/* ===============================
+   BOTÓN MODO CLARO/OSCURO (navbar)
+   =============================== */
+.btn-modo {
+  background-color: transparent;
+  border: 1px solid var(--mostaza);
+  color: var(--mostaza);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-modo:hover {
+  background-color: var(--mostaza);
+  color: #1a1a1a;
+}
+
+/* ===============================
+   MODO CLARO (se activa con JS al hacer clic en 🌗 Modo)
+   =============================== */
+body.modo-claro {
+  background-color: #f4ede0;
+  color: #241a12;
+}
+
+body.modo-claro .card-banda {
+  background-color: #ffffff;
+  color: #241a12;
+}
+
+body.modo-claro .card-banda .card-title {
+  color: #241a12;
+}
+
+body.modo-claro .card-banda .card-text {
+  color: #4a4038;
+}
+
+body.modo-claro .titulo-decada {
+  color: var(--oxido);
+}
+
+/* ===============================
+   PÁGINA DE DETALLE DE BANDA
+   =============================== */
+
+/* Botón "Volver" del navbar */
+.btn-volver {
+  background-color: transparent;
+  border: 1px solid var(--mostaza);
+  color: var(--mostaza);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-volver:hover {
+  background-color: var(--mostaza);
+  color: #1a1a1a;
+}
+
+/* Imagen grande (hero) con degradado abajo para que el título se lea bien */
+.hero-detalle {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--oxido);
+}
+
+.hero-detalle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+
+/* Cards de álbumes recomendados */
+.card-album {
+  background-color: var(--carbon-claro);
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
+}
+
+.card-album .card-title {
+  color: #f2f2f2;
+}
+
+.card-album:hover {
+  transform: translateY(-6px);
+}
+
+
+
+.album-portada {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--oxido), var(--mostaza));
+  color: #ffffff;
+}
+
+/* Cards de videos / material destacado */
+.card-video {
+  background-color: var(--carbon-claro);
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
+}
+
+.card-video .card-title {
+  color: #f2f2f2;
+}
+
+.card-video:hover {
+  transform: translateY(-6px);
+}
+
+.video-miniatura {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background-color: #0d0d0d;
+  color: var(--mostaza);
+}
+
+/* ===============================
+   VOLVER A LA LISTA (grande)
+   =============================== */
+.btn-volver-grande {
+  background-color: var(--oxido);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 10px 28px;
+  font-size: 1rem;
+}
+
+.btn-volver-grande:hover {
+  background-color: var(--mostaza);
+  color: #1a1a1a;
+}
+
+/* ===============================
+   PÁGINA "CONOCE MÁS" DE CADA DÉCADA (grupos60s.html, grupos70s.html, ...)
+   El color de acento de la página se controla con --acento-pagina
+   (se define una vez en <body style="--acento-pagina: var(--acento-60);">)
+   =============================== */
+
+.card-artista-grande {
+  background-color: var(--carbon-claro);
+  border-radius: 20px;
+  padding: 28px 16px 22px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-artista-grande:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.6);
+}
+
+.card-artista-grande h5 {
+  color: #f2f2f2;
+  margin-top: 4px;
+}
+
+/* Contenedor de la foto redonda + anillo tipo disco girando */
+.disco-giratorio {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 16px;
+}
+
+/* Anillo exterior, gira sin parar */
+.disco-giratorio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px dashed var(--acento-pagina, var(--mostaza));
+  animation: girar-disco 7s linear infinite;
+}
+
+/* Segundo anillo, más tenue, gira al revés (efecto vinilo) */
+.disco-giratorio::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: girar-disco 5s linear infinite reverse;
+}
+
+@keyframes girar-disco {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.foto-artista {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--carbon-claro);
+}
+
+/* Al pasar el mouse, el disco gira más rápido (feedback visual) */
+.card-artista-grande:hover .disco-giratorio::before,
+.card-artista-grande:hover .disco-giratorio::after {
+  animation-duration: 2s;
+}
+
+/* Chips de "álbum recomendado" */
+.chip-album {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e8e8e8;
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  margin: 3px 2px;
+  text-decoration: none;  /* ← nueva: quita el subrayado de link */
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;  /    
+
+  
+}
+/* ↓ bloque completo nuevo */
+.chip-album:hover {
+  background-color: var(--acento-pagina, var(--mostaza));
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+/* Botón "Ver más" debajo de cada artista, dentro del disco */
+.tag-clic {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--acento-pagina, var(--mostaza));
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+
+
+/* ===============================
+   FOOTER
+   =============================== */
+.mi-footer {
+  background-color: #141414;
+  border-top: 3px solid var(--oxido);
+  margin-top: 40px;
+}
+
+
+/*Esto es el fondo de respaldo de la sección del hero*/
+.titulo-principal {
+  background: linear-gradient(135deg, var(--oxido), var(--mostaza));
+  padding: 60px 20px;
+}
+
+/* se saca del flujo normal, se posiciona libre dentro de la sección */
+.hero-imagen-fija {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+ /* capa de en MEDIO (arriba de la foto, abajo del texto) */ 
+.hero-overlay-degradado {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(24, 79, 4, 0.8), rgba(147, 4, 11, 0.8));
+  z-index: 1;
+}
+
+ /* capa de más ARRIBA (encima de todo) */
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
