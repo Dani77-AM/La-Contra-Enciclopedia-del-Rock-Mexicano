@@ -255,6 +255,9 @@ Sí, hubo varios momentos. Aprendí que hay que saber preguntar bien para no rep
 
 Siempre respaldé mis prototipos antes de volver a pedir o copiar nueva información, para no perder avances si algo salía mal.
 
+![Tabla de especificacione](capturas/tablita.png)
+
+
 📸 Capturas de la página
 
 ![Vista de inicio ](capturas/principal1.png)
