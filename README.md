@@ -22,21 +22,24 @@ Claude AI
 
 
 4. Proceso con IA
-
 Prompt #1
 
-Quiero una paleta de colores más típica del rock mexicano, no tan rosa/naranja/morado, algo más enfocado en décadas: 60s colores más psicodélicos, 70s más progresivos, 80s más electrónica y punk, 90s más alternativo, 2000s algo más novedoso. No lo metas al código, solo dame ideas.
+Quiero una paleta de colores más típica del rock mexicano no tan rosa naranja y morado algo más enfocado en décadas sesenta colores más psicodélicos 70s más progresivos 80s más electrónica y punk y 90s más alternativo 2000s algo más novedoso no lo metas al código solo dame ideas.
 
-Prompt #2
 
-En el botón de "Conocer más" o "Explora más" irá a dar a otra página con información relevante de varios artistas. Lo que quiero es hacer cuadros de reseñas donde salgan otros cuatro artistas, en forma redonda, con 2 álbumes recomendados y abajo unos enlaces de YouTube. Quiero que esta página tenga cosas dinámicas — dame ideas, ya que ese será el esqueleto para las demás décadas.
+prompt # 2
+
+en el botón de conocer más o explora más ira a dar a otra página con información relevante de varios artistas lo que quiero es hacer  cuadros de reseñas donde salga otros cuatro artistas ya bajo en forma redonda 2 álbumes que sean recomendados y abajo unos enlaces de YouTube quiero que esta página tenga cosas dinámicas dame ideas ya que ese será el esqueleto para las demás décadas
+
 
 5. Código generado vs. código propio
-Generado con ayuda de la IA
 
-La IA me ayudó bastante en los estilos, sobre todo en las animaciones:
+La IA me ayudó bastante en los **estilos y animaciones** (el anillo giratorio tipo disco, el degradado del hero y el centrado del contenido). El resto — la paleta de colores en variables, la tipografía, el navbar, los títulos y bordes por década, y los botones — lo fui ajustando y escribiendo yo mismo con base en lo que ya tenía.
 
-css
+<details>
+<summary>💡 Ver código generado con ayuda de la IA (animaciones y hero)</summary>
+
+```css
 /* Anillo exterior, gira sin parar */
 .disco-giratorio::before {
   content: "";
@@ -72,174 +75,79 @@ css
   flex-direction: column;
   justify-content: center;
 }
-Código propio
-css
-.foto-artista {
-  position: absolute;
-  inset: 18px;
-  width: calc(100% - 36px);
-  height: calc(100% - 36px);
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--carbon-claro);
-}
+```
 
-/* ===============================
-   VARIABLES DE LA PALETA (fondo carbón + acentos por década)
-   =============================== */
+</details>
+
+<details>
+<summary>✍️ Ver código propio (paleta, navbar, cards, botones)</summary>
+
+```css
 :root {
   --carbon: #1a1a1a;
   --carbon-claro: #242424;
   --oxido: #b23a2e;
   --mostaza: #0a4c4b;
-
-  /* Acento propio de cada década */
-  --acento-60: #d4a017;   /* mostaza psicodélica */
-  --acento-70: #a67c27;   /* dorado envejecido progresivo */
-  --acento-80: #00e5ff;   /* cian eléctrico punk/synth */
-  --acento-90: #a6431b;   /* óxido grunge/alternativo */
-  --acento-2000: #0057ff; /* azul digital */
-  --acento-2010: #16a394; /* verde-azulado indie/streaming */
-  --acento-2020: #e85d3f; /* coral vibrante */
+  --acento-60: #d4a017;
+  --acento-70: #a67c27;
+  --acento-80: #00e5ff;
+  --acento-90: #a6431b;
+  --acento-2000: #0057ff;
+  --acento-2010: #16a394;
+  --acento-2020: #e85d3f;
 }
 
-/* ===============================
-   TIPOGRAFÍA (personalización 1)
-   =============================== */
 body {
   font-family: 'Segoe UI', Verdana, sans-serif;
   background-color: var(--carbon);
   color: #e8e8e8;
 }
 
-/* ===============================
-   NAVBAR (personalización 2: color)
-   =============================== */
 .mi-navbar {
   background-color: #141414;
   border-bottom: 3px solid var(--oxido);
 }
 
-.mi-navbar .nav-link {
-  color: #e8e8e8;
-  transition: color 0.3s ease; /* preparación para hover */
-}
-
-/* Hover en los links del navbar (personalización 3: hover) */
 .mi-navbar .nav-link:hover {
   color: var(--mostaza);
 }
 
-/* ===============================
-   TÍTULO PRINCIPAL (degradado)
-   =============================== */
-.titulo-principal {
-  background: linear-gradient(135deg, var(--oxido), var(--mostaza));
-  padding: 60px 20px;
-}
-
-/* ===============================
-   TÍTULOS DE CADA DÉCADA (personalización 4: bordes)
-   =============================== */
 .titulo-decada {
   color: var(--mostaza);
   border-left: 6px solid var(--oxido);
   padding-left: 12px;
-  margin-bottom: 15px;
 }
 
-/* Cada década toma su propio acento */
-#decada60 .titulo-decada   { color: var(--acento-60);   border-left-color: var(--acento-60); }
-#decada70 .titulo-decada   { color: var(--acento-70);   border-left-color: var(--acento-70); }
-#decada80 .titulo-decada   { color: var(--acento-80);   border-left-color: var(--acento-80); }
-#decada90 .titulo-decada   { color: var(--acento-90);   border-left-color: var(--acento-90); }
-#decada2000 .titulo-decada { color: var(--acento-2000); border-left-color: var(--acento-2000); }
-#decada2010 .titulo-decada { color: var(--acento-2010); border-left-color: var(--acento-2010); }
-#decada2020 .titulo-decada { color: var(--acento-2020); border-left-color: var(--acento-2020); }
-
-/* ===============================
-   CARDS (personalización 5: bordes + tamaño de imagen)
-   =============================== */
 .card-banda {
   background-color: var(--carbon-claro);
-  border: none;
   border-top: 4px solid var(--oxido);
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover */
-  animation: aparecer 0.6s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#decada60 .card-banda   { border-top-color: var(--acento-60); }
-#decada70 .card-banda   { border-top-color: var(--acento-70); }
-#decada80 .card-banda   { border-top-color: var(--acento-80); }
-#decada90 .card-banda   { border-top-color: var(--acento-90); }
-#decada2000 .card-banda { border-top-color: var(--acento-2000); }
-#decada2010 .card-banda { border-top-color: var(--acento-2010); }
-#decada2020 .card-banda { border-top-color: var(--acento-2020); }
-
-/* Hover en las cards: se eleva y crece un poco */
 .card-banda:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.6);
 }
 
-.card-banda .card-title {
-  color: #f2f2f2;
-}
-
-.card-banda .card-text {
-  color: #b8b8b8;
-}
-
-/* Contenedor de la imagen para el overlay al hacer hover */
-.card-img-wrap {
-  overflow: hidden;
-  position: relative;
-}
-
-.card-banda img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-/* La imagen hace zoom suave al pasar el mouse */
-.card-banda:hover img {
-  transform: scale(1.08);
-}
-
-/* Animación de entrada de las cards */
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===============================
-   BOTONES personalizados (personalización 6: colores + margen)
-   =============================== */
 .btn-mi-boton {
   background-color: var(--oxido);
   color: #ffffff;
-  border: none;
   border-radius: 20px;
   padding: 6px 16px;
-  margin: 4px 4px 0 0;
-  font-size: 0.9rem;
 }
 
 .btn-mi-boton:hover {
   background-color: var(--mostaza);
   color: #1a1a1a;
 }
+```
+> Código completo disponible en [`css/styles.css`](css/styles.css)
+
+</details>
+
+
+
 6. Aprendizaje
 
 No sabía cómo animar algunas secciones, y la IA me ayudó bastante a darle un poco más de dinamismo a la página.
