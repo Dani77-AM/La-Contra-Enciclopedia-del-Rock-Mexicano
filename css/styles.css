@@ -188,8 +188,7 @@ body {
 /* Se dejan los colores de marca originales: son íconos reconocibles
    y no deben cambiar aunque cambie la paleta del sitio me
    Importante falta modicar aqui ya que en algunos casos no se usara el de facebook si no el de discogs */
-.btn-facebook { background-color: #1877f2; }
-.btn-spotify  { background-color: #1db954; }
+
 .btn-youtube  { background-color: #cc0000; }
 
 .icono-red {
